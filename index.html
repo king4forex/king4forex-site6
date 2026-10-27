@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="fa"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>فور فارکس | ابزارهای هوشمند تحلیل تکنیکال و معاملات</title><link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;font-family:'Vazirmatn',sans-serif;background-color:#08080a;color:#e5e1e4;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.font-latin { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; direction: ltr; display: inline-block; }
+.gold-gradient-bg { background: linear-gradient(135deg, #F5B301 0%, #FFD700 50%, #E5A910 100%); }
+.gold-gradient-text { background: linear-gradient(135deg, #FFF0BE 0%, #FFD700 50%, #F5B301 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.gold-border-glow { border: 1px solid rgba(245, 179, 1, 0.22); box-shadow: 0 0 25px -5px rgba(245, 179, 1, 0.08); }
+.gold-card-hover:hover { border-color: rgba(255, 215, 0, 0.45); box-shadow: 0 10px 30px -8px rgba(245, 179, 1, 0.18); }
+.gold-btn {
+  background: linear-gradient(135deg, #ffd485 0%, #f5b301 60%, #df9b00 100%);
+  color: #271900;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(245, 179, 1, 0.28);
+}
+.gold-btn:hover {
+  background: linear-gradient(135deg, #ffe08f 0%, #febb14 60%, #e8a500 100%);
+  box-shadow: 0 6px 24px rgba(245, 179, 1, 0.42);
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#271900", "tertiary-fixed": "#fee178", "primary-container": "#f5b301", "on-secondary": "#3d2e00", "surface-container-low": "#111217", "on-tertiary": "#3b2f00", "surface-variant": "#1c1d24", "error-container": "#93000a", "on-error": "#690005", "chart-bullish": "#34C759", "chart-bearish": "#FF453A", "surface-container": "#15161c", "on-primary-fixed-variant": "#5d4200", "on-primary": "#412d00", "outline": "#9d8f78", "on-background": "#e5e1e4", "outline-variant": "rgba(245, 179, 1, 0.2)", "primary": "#ffd485", "on-tertiary-container": "#5c4c00", "secondary-fixed": "#ffe08f", "surface-container-highest": "#1f2029", "tertiary-container": "#d8bd58", "on-secondary-fixed-variant": "#584400", "inverse-surface": "#e5e1e4", "surface-dim": "#08080a", "secondary-container": "#c59b00", "on-secondary-fixed": "#241a00", "on-surface-variant": "#d4c4ac", "on-primary-container": "#412d00", "on-error-container": "#ffdad6", "primary-fixed": "#ffdea5", "inverse-primary": "#7b5800", "surface-tint": "#febb14", "on-tertiary-fixed-variant": "#554500", "surface": "#0e0f14", "tertiary": "#f5d971", "background": "#08080a", "primary-fixed-dim": "#febb14", "on-surface": "#e5e1e4", "error": "#ffb4ab", "secondary": "#efc134", "on-tertiary-fixed": "#221b00", "on-secondary-container": "#463500", "surface-container-lowest": "#060608", "surface-container-high": "#1a1b22", "secondary-fixed-dim": "#efc134", "surface-bright": "#22232a", "tertiary-fixed-dim": "#e0c560" }, "borderRadius": { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin": "1.5rem", "space-2xl": "4rem", "space-3xl": "6rem", "space-xs": "0.25rem", "space-md": "1rem" }, "fontFamily": { "headline-md": ["Vazirmatn", "Space Grotesk", "sans-serif"], "headline-sm": ["Vazirmatn", "Space Grotesk", "sans-serif"], "label-lg": ["Vazirmatn", "Space Grotesk", "sans-serif"], "body-lg": ["Vazirmatn", "Manrope", "sans-serif"], "body-md": ["Vazirmatn", "Manrope", "sans-serif"], "body-sm": ["Vazirmatn", "Manrope", "sans-serif"], "headline-lg": ["Vazirmatn", "Space Grotesk", "sans-serif"], "headline-xl-mobile": ["Vazirmatn", "Space Grotesk", "sans-serif"], "label-md": ["Vazirmatn", "Space Grotesk", "sans-serif"], "display-hero": ["Vazirmatn", "Space Grotesk", "sans-serif"], "headline-xl": ["Vazirmatn", "Space Grotesk", "sans-serif"], "label-sm": ["Vazirmatn", "Space Grotesk", "sans-serif"], "body-xl": ["Vazirmatn", "Manrope", "sans-serif"], "display-hero-mobile": ["Vazirmatn", "Space Grotesk", "sans-serif"] }, "fontSize": { "headline-md": ["22px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }], "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-xl-mobile": ["28px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "display-hero": ["54px", { "lineHeight": "68px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-xl": ["38px", { "lineHeight": "50px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-xl": ["20px", { "lineHeight": "34px", "fontWeight": "400" }], "display-hero-mobile": ["34px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "800" }] } } } };</script><link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+</head><body class="bg-[#08080a] font-body-md text-[#e5e1e4] antialiased selection:bg-[#f5b301] selection:text-[#271900]"><header class="fixed top-0 left-0 right-0 z-50 bg-[#08080a]/85 backdrop-blur-xl saturate-180 border-b border-[#f5b301]/20 shadow-[0_4px_30px_rgba(0,0,0,0.8)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="p-1 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center"><img alt="لوگو فور فارکس" class="h-7 w-auto object-contain shrink-0 invert brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0xq4PkSTt5zSzuitTn4INoO2u4Aze4rNn-DVNX3yCIzAUmOJR2Bz8UQ2p5OYuhZNwwZoJXEjUVMP9ck07WJmGkyeV-0YU15s5c9Huf0zb5tAhmZgz737_35jungFePMdBZsaXdLCrf38nDGK-xSAp4QgfhZeqDayRw9lPPL0MDDbQVTDg317_2910A8DQHbkirg6FVUd4tbCWKgqb3em6Ze8yHDJxzpK9K8VXJAY5Yf-6zedhxbPF_A"/></div><span class="font-headline-sm text-headline-sm tracking-tight text-white font-bold flex items-center gap-1.5"><span class="gold-gradient-text">فور فارکس</span></span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="font-label-lg text-label-lg text-primary font-bold relative after:absolute after:bottom-[-20px] after:left-0 after:right-0 after:h-[2px] after:bg-[#f5b301]" data-path="home" href="index.html">خانه</a><a class="font-label-lg text-label-lg text-neutral-400 hover:text-primary transition-colors" data-path="products" href="products.html">محصولات</a><a class="font-label-lg text-label-lg text-neutral-400 hover:text-primary transition-colors" data-path="about" href="about.html">درباره ما</a><a class="font-label-lg text-label-lg text-neutral-400 hover:text-primary transition-colors" data-path="contact" href="contact.html">تماس با ما</a></nav><div class="flex items-center gap-space-sm"><button aria-label="جستجو" class="w-9 h-9 rounded-full flex items-center justify-center text-neutral-400 hover:text-primary hover:bg-[#1c1d24] border border-neutral-800 transition-all"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-2 rounded-full gold-btn font-label-md text-label-md transition-all shadow-[0_2px_12px_rgba(245,179,1,0.25)]" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">send</span><span>پشتیبانی تلگرام</span></a><div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-amber-600 flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-[#08080a] min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO CAMPAIGN -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-[#0e0f14] via-[#08080a] to-[#08080a] pt-space-2xl pb-space-3xl border-b border-[#f5b301]/15">
+<div class="absolute -top-36 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-gradient-to-b from-primary/15 via-primary-container/8 to-transparent blur-[120px] pointer-events-none rounded-full"></div>
+<div class="absolute top-1/3 -right-48 w-96 h-96 bg-amber-500/5 blur-[100px] pointer-events-none rounded-full"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center relative z-10">
+<!-- Overline Tag -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-[#1b1e28] border border-[#f5b301]/30 text-[#ffd485] font-label-md text-label-md mb-space-lg shadow-[0_0_15px_rgba(245,179,1,0.12)]">
+<span class="w-2 h-2 rounded-full bg-[#f5b301] animate-pulse"></span>
+<span>معماری نوین تحلیل و نظارت بر بازارهای مالی</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-headline-xl sm:text-display-hero max-w-4xl text-white tracking-tight mb-space-md font-extrabold leading-[1.25]">
+        تحلیل هوشمندتر، تصمیم <span class="gold-gradient-text">آگاهانه‌تر</span>
+</h1>
+<!-- Editorial Subtitle -->
+<p class="font-body-xl text-body-lg sm:text-body-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-space-xl">ابزارها و محتوای معاملاتی فور فارکس برای کمک به تحلیل بازار و ساختن یک فرایند معاملاتی منظم‌تر</p>
+<!-- Primary & Ghost Actions -->
+<div class="flex flex-wrap items-center justify-center gap-space-md mb-space-3xl">
+<a class="gold-btn px-8 py-3.5 rounded-full font-label-lg text-label-lg transition-all transform hover:scale-[1.02] active:scale-[0.99] flex items-center gap-space-xs" href="#products-bento">
+<span>مشاهده محصولات</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</a>
+<a class="px-6 py-3.5 rounded-full bg-[#15161c] hover:bg-[#1f2029] text-white border border-[#f5b301]/25 font-label-lg text-label-lg transition-all flex items-center gap-space-xs shadow-sm hover:border-[#f5b301]/50" href="#indicators">
+<span>درباره فور فارکس</span>
+<span class="material-symbols-outlined text-[18px] rotate-180">arrow_forward</span>
+</a>
+</div>
+<!-- Institutional Mock Dashboard (Apple Silicon Inspired Tray) -->
+<div class="w-full max-w-5xl rounded-3xl bg-[#111217] gold-border-glow p-4 sm:p-6 lg:p-8 shadow-[0_24px_80px_rgba(0,0,0,0.6)] text-white relative">
+<!-- Decorative Ambient Glow -->
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-16 -right-16 w-48 h-48 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Top Window Pill Meta -->
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-white/5 relative z-10">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-[#FF5F56]/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-[#FFBD2E]/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-[#27C93F]/80 inline-block"></span>
+<span class="font-mono text-label-sm text-neutral-400 ml-2 hidden sm:inline">4FX-PRO-TERMINAL // v4.2</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2 bg-white/5 border border-white/5 rounded-full px-3 py-1 text-label-sm text-white/90">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-bullish"></span>
+<span class="font-latin">EUR / USD — 1.08452</span>
+</div>
+<span class="text-label-sm text-chart-bullish bg-chart-bullish/10 px-2.5 py-0.5 rounded-full font-mono border border-chart-bullish/20">+0.38%</span>
+</div>
+</div>
+<!-- Integrated Trading Screen Canvas -->
+<div class="relative w-full h-72 sm:h-96 rounded-2xl bg-[#09090c] p-4 flex flex-col justify-between overflow-hidden border border-white/5">
+<!-- Background Grid Overlay -->
+<div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
+<!-- Dynamic SVG Chart Canvas -->
+<svg class="absolute inset-0 w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 1000 400">
+<defs>
+<lineargradient id="primaryAreaGlow" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F5B301" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#F5B301" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="emaGrad" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#F5B301" stop-opacity="0.6"></stop>
+<stop offset="70%" stop-color="#FFD485" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#34C759" stop-opacity="1"></stop>
+</lineargradient>
+</defs>
+<!-- EMA Trend Curves -->
+<path d="M 0,260 C 150,270 280,220 420,230 C 560,240 700,160 850,170 L 1000,120" fill="none" opacity="0.4" stroke="#F5B301" stroke-dasharray="4 4" stroke-width="2"></path>
+<path d="M 0,220 C 180,240 320,180 500,190 C 680,200 800,110 1000,90" fill="none" stroke="url(#emaGrad)" stroke-width="2.5"></path>
+<!-- Volumetric Fill under trend -->
+<path d="M 0,220 C 180,240 320,180 500,190 C 680,200 800,110 1000,90 L 1000,400 L 0,400 Z" fill="url(#primaryAreaGlow)"></path>
+<!-- Stylized Candles -->
+<!-- Bar 1 -->
+<line stroke="#FF453A" stroke-width="1.5" x1="80" x2="80" y1="210" y2="280"></line>
+<rect fill="#FF453A" height="35" rx="1" width="12" x="74" y="225"></rect>
+<!-- Bar 2 -->
+<line stroke="#34C759" stroke-width="1.5" x1="160" x2="160" y1="190" y2="260"></line>
+<rect fill="#34C759" height="40" rx="1" width="12" x="154" y="200"></rect>
+<!-- Bar 3 -->
+<line stroke="#34C759" stroke-width="1.5" x1="240" x2="240" y1="180" y2="240"></line>
+<rect fill="#34C759" height="30" rx="1" width="12" x="234" y="195"></rect>
+<!-- Bar 4 -->
+<line stroke="#FF453A" stroke-width="1.5" x1="320" x2="320" y1="170" y2="250"></line>
+<rect fill="#FF453A" height="42" rx="1" width="12" x="314" y="190"></rect>
+<!-- Bar 5 -->
+<line stroke="#34C759" stroke-width="1.5" x1="400" x2="400" y1="150" y2="230"></line>
+<rect fill="#34C759" height="45" rx="1" width="12" x="394" y="165"></rect>
+<!-- Bar 6 -->
+<line stroke="#FF453A" stroke-width="1.5" x1="480" x2="480" y1="160" y2="220"></line>
+<rect fill="#FF453A" height="28" rx="1" width="12" x="474" y="175"></rect>
+<!-- Bar 7 -->
+<line stroke="#34C759" stroke-width="1.5" x1="560" x2="560" y1="130" y2="210"></line>
+<rect fill="#34C759" height="50" rx="1" width="12" x="554" y="145"></rect>
+<!-- Bar 8 -->
+<line stroke="#34C759" stroke-width="1.5" x1="640" x2="640" y1="120" y2="190"></line>
+<rect fill="#34C759" height="40" rx="1" width="12" x="634" y="130"></rect>
+<!-- Bar 9 -->
+<line stroke="#FF453A" stroke-width="1.5" x1="720" x2="720" y1="110" y2="175"></line>
+<rect fill="#FF453A" height="32" rx="1" width="12" x="714" y="125"></rect>
+<!-- Bar 10 -->
+<line stroke="#34C759" stroke-width="1.5" x1="800" x2="800" y1="90" y2="160"></line>
+<rect fill="#34C759" height="40" rx="1" width="12" x="794" y="105"></rect>
+<!-- Bar 11 (Pulse Peak) -->
+<line stroke="#34C759" stroke-width="1.5" x1="880" x2="880" y1="75" y2="140"></line>
+<rect fill="#34C759" height="38" rx="1" width="12" x="874" y="85"></rect>
+<!-- Bar 12 Live Pin -->
+<circle cx="940" cy="98" fill="#34C759" r="4"></circle>
+<circle cx="940" cy="98" opacity="0.4" r="10" stroke="#34C759" stroke-width="1"></circle>
+</svg>
+<!-- Floating Ambient Glass Badges -->
+<div class="relative z-10 flex flex-wrap items-center justify-between gap-4 pointer-events-none">
+<div class="flex items-center gap-3 backdrop-blur-md bg-[#181920]/80 border border-[#f5b301]/25 px-3.5 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">tune</span>
+<span class="font-label-md text-label-md text-white/90">سیستم تطبیقی مومنتوم و رنج</span>
+</div>
+<div class="flex items-center gap-3 backdrop-blur-md bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full font-mono text-label-sm text-neutral-400">
+<span class="font-latin">RSI (14): 61.4</span>
+<span>•</span>
+<span class="font-latin">VOL: 142.8K</span>
+</div>
+</div>
+<!-- Bottom Metric HUD -->
+<div class="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-3 bg-black/60 backdrop-blur-lg p-3 rounded-xl border border-[#f5b301]/20">
+<div>
+<p class="font-label-sm text-label-sm text-neutral-400">محدوده نوسان (ATR)</p>
+<p class="font-headline-sm text-headline-sm text-white font-mono mt-0.5">0.0074</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-neutral-400">جهت جریان اردرها</p>
+<p class="font-headline-sm text-headline-sm text-chart-bullish mt-0.5">صعودی پایدار</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-neutral-400">تایم‌فریم فعال</p>
+<p class="font-headline-sm text-headline-sm text-white font-mono mt-0.5">M15 / H1</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-neutral-400">سطح تلاقی هوشمند</p>
+<p class="font-headline-sm text-headline-sm text-primary font-mono mt-0.5">1.08210</p>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-center gap-2 text-neutral-400 font-body-sm text-body-sm relative z-10">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>داده‌های بصری استاندارد بدون وعده‌های ساختگی نرخ برد — متمرکز بر انضباط تکنیکال</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: INDICATOR SUBSCRIPTIONS SPOTLIGHT -->
+<section class="w-full bg-[#0b0c10] py-space-3xl border-b border-[#f5b301]/15" id="indicators">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary tracking-widest block mb-2 uppercase font-bold">INDICATOR PLANS</span>
+<h2 class="font-headline-xl text-headline-xl text-white tracking-tight font-bold">ابزار تحلیل، متناسب با مسیر تو</h2>
+<p class="font-body-lg text-body-lg text-neutral-400 mt-space-xs max-w-xl">
+            اشتراک سه‌ماهه، شش‌ماهه یا یک‌ساله اندیکاتور را بر اساس نیازت انتخاب کن.
+          </p>
+</div>
+<a class="font-label-lg text-label-lg text-primary hover:text-amber-300 transition-colors inline-flex items-center gap-1 self-start md:self-end font-semibold" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>مشاهده جزئیات اشتراک‌ها</span>
+<span class="material-symbols-outlined text-[18px] rotate-180">arrow_forward</span>
+</a>
+</div>
+<!-- 3 Tiered Cards in Obsidian Dark & Gold -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch">
+<!-- Tier 1: 3 Months -->
+<div class="bg-[#111217] gold-border-glow gold-card-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300">
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-[#181920] border border-white/5 text-neutral-300 font-label-sm text-label-sm mb-6">آزمودن استراتژی</span>
+<h3 class="font-headline-lg text-headline-lg text-white font-bold">اشتراک ۳ ماهه اندیکاتور</h3>
+<p class="font-body-md text-body-md text-neutral-400 mt-3 leading-relaxed">
+              سه ماه دسترسی به ابزار تحلیل تکنیکال برای پایش روان‌تر نمودار و شناسایی واکنش‌های کلیدی.
+            </p>
+<div class="my-8">
+<span class="font-latin text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-tight">$20</span>
+<span class="font-body-sm text-body-sm text-neutral-400 mr-1">/ دوره سه‌ماهه</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-neutral-300 mb-8">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>دسترسی به تمامی چارت های بازار</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>راهنمای راه‌اندازی و اتصال آسان</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>پشتیبانی تلگرامی مستقیم</span>
+</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span><span>سیگنال‌های خرید و فروش دقیق</span></li><li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span><span>وین‌ریت بالای ۷۰٪</span></li></ul>
+</div>
+<a class="w-full py-3.5 rounded-full bg-[#181920] hover:bg-[#20222c] text-white border border-[#f5b301]/25 hover:border-[#f5b301]/60 font-label-md text-label-md text-center transition-all flex items-center justify-center gap-2" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+<!-- Tier 2: 6 Months (Balanced Highlight) -->
+<div class="bg-gradient-to-b from-[#161822] to-[#111217] rounded-3xl p-8 flex flex-col justify-between border-2 border-[#f5b301]/60 shadow-[0_12px_45px_rgba(245,179,1,0.15)] relative transform md:-translate-y-2">
+<div class="absolute -top-3.5 right-8">
+<span class="px-3.5 py-1 rounded-full gold-gradient-bg text-[#271900] font-label-sm text-label-sm font-bold shadow-md">انتخاب محبوب معامله‌گران</span>
+</div>
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/25 text-primary font-label-sm text-label-sm mb-6 mt-1">تداوم و تثبیت تحلیل</span>
+<h3 class="font-headline-lg text-headline-lg text-white font-bold">اشتراک ۶ ماهه اندیکاتور</h3>
+<p class="font-body-md text-body-md text-neutral-400 mt-3 leading-relaxed">
+              شش ماه همراهی با ابزار تحلیل بازار، مناسب معامله‌گرانی که به دنبال سنجش عمیق عملکرد هستند.
+            </p>
+<div class="my-8">
+<span class="font-latin text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-tight">$55</span>
+<span class="font-body-sm text-body-sm text-neutral-400 mr-1">/ دوره شش‌ماهه</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-neutral-300 mb-8">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-bullish text-[18px]">check_circle</span>
+<span>صرفه‌جویی اقتصادی نسبت به دوره کوتاه</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-bullish text-[18px]">check_circle</span>
+<span>دریافت آپدیت‌های محاسباتی جدید</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-bullish text-[18px]">check_circle</span>
+<span>دسترسی اولویت‌دار به پشتیبانی تلگرام</span>
+</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-chart-bullish text-[18px]">check_circle</span><span>سیگنال‌های خرید و فروش دقیق</span></li><li class="flex items-center gap-2"><span class="material-symbols-outlined text-chart-bullish text-[18px]">check_circle</span><span>وین‌ریت بالای ۷۰٪</span></li></ul>
+</div>
+<a class="gold-btn w-full py-3.5 rounded-full text-center transition-all flex items-center justify-center gap-2" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+<!-- Tier 3: 1 Year -->
+<div class="bg-[#111217] gold-border-glow gold-card-hover rounded-3xl p-8 flex flex-col justify-between transition-all duration-300">
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-[#181920] border border-white/5 text-neutral-300 font-label-sm text-label-sm mb-6">تعهد به سبک کاری</span>
+<h3 class="font-headline-lg text-headline-lg text-white font-bold">اشتراک ۱ ساله اندیکاتور</h3>
+<p class="font-body-md text-body-md text-neutral-400 mt-3 leading-relaxed">
+              یک سال دسترسی برای استفاده بلندمدت، کمترین هزینه به ازای هر ماه و ثبات کامل تحلیلی.
+            </p>
+<div class="my-8">
+<span class="font-latin text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-tight">$99</span>
+<span class="font-body-sm text-body-sm text-neutral-400 mr-1">/ سالانه (بهترین ارزش)</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-neutral-300 mb-8">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>بیشترین تخفیف دوره بلندمدت</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>پشتیبانی کامل ۳۶۵ روزه در تلگرام</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>سازگاری دائمی با پلتفرم بدون وقفه</span>
+</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span><span>سیگنال‌های خرید و فروش دقیق</span></li><li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span><span>وین‌ریت بالای ۷۰٪</span></li></ul>
+</div>
+<a class="w-full py-3.5 rounded-full bg-[#181920] hover:bg-[#20222c] text-white border border-[#f5b301]/25 hover:border-[#f5b301]/60 font-label-md text-label-md text-center transition-all flex items-center justify-center gap-2" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: STRATEGIES & NEWS VIP DUAL SHOWCASE -->
+<section class="w-full bg-[#08080a] py-space-3xl border-b border-[#f5b301]/15">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm text-primary tracking-widest block mb-2 uppercase font-bold">STRATEGY &amp; MACRO INTELLIGENCE</span>
+<h2 class="font-headline-xl text-headline-xl text-white tracking-tight font-bold">برای بازار، آماده‌تر باش</h2>
+<p class="font-body-lg text-body-lg text-neutral-400 mt-space-xs leading-relaxed">
+          با مجموعه استراتژی‌های معاملاتی و محتوای مرتبط با اخبار مهم اقتصادی، ابزارهای بیشتری برای بررسی سناریوهای بازار در اختیار داشته باش.
+        </p>
+</div>
+<!-- Keynote Dual Split -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Card 1: 10 High Win-Rate Strategies -->
+<div class="bg-[#111217] gold-border-glow rounded-3xl p-8 lg:p-12 flex flex-col justify-between overflow-hidden relative">
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="font-label-md text-label-md text-[#ffd485] font-semibold bg-[#181920] border border-[#f5b301]/30 px-3.5 py-1 rounded-full">مجموعه مدون آموزشی</span>
+<span class="font-latin text-3xl font-extrabold gold-gradient-text">$19</span>
+</div>
+<h3 class="font-headline-xl text-[28px] sm:text-[30px] leading-tight text-white font-bold">۱۰ استراتژی با وین‌ریت بالا برای ترید</h3>
+<p class="font-body-md text-body-md text-neutral-400 mt-4 leading-relaxed max-w-md">
+              ۱۰ ایده و چارچوب معاملاتی برای بررسی و تمرین؛ ساختاربندی‌شده بر مبنای ستاپ‌های ورود، حد ضرر منطقی و نسبت سود به زیان استاندارد.
+            </p>
+<!-- Vector Strategy Schematic -->
+<div class="mt-8 mb-8 bg-[#09090c] rounded-2xl p-5 border border-white/5">
+<div class="flex items-center justify-between text-label-sm text-neutral-400 mb-3">
+<span>الگوی نمونه: شکست محدوده تجمعی (Liquidity Sweep)</span>
+<span class="text-chart-bullish font-mono">RR 1:2.8</span>
+</div>
+<svg class="w-full h-24" fill="none" viewbox="0 0 500 100">
+<path d="M 10,60 L 80,60 L 120,40 L 180,75 L 240,30 L 290,30 L 330,85 L 360,20 L 490,15" stroke="#f5b301" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Entry marker -->
+<circle cx="360" cy="20" fill="#f5b301" r="4"></circle>
+<rect fill="#f5b301" height="18" opacity="0.2" rx="4" width="50" x="350" y="28"></rect>
+<text fill="#ffd485" font-family="Space Grotesk" font-size="10" font-weight="bold" x="355" y="41">ENTRY</text>
+<!-- Stop loss guide line -->
+<line stroke="#FF453A" stroke-dasharray="3 3" stroke-width="1.5" x1="300" x2="420" y1="85" y2="85"></line>
+<text fill="#FF453A" font-family="Space Grotesk" font-size="9" x="300" y="96">STOP LOSS</text>
+</svg>
+</div>
+</div>
+<a class="gold-btn w-full sm:w-auto self-start px-8 py-3.5 rounded-full text-center transition-all flex items-center justify-center gap-2" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+<!-- Card 2: VIP News Channel -->
+<div class="bg-[#111217] gold-border-glow rounded-3xl p-8 lg:p-12 flex flex-col justify-between overflow-hidden relative">
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="font-label-md text-label-md text-chart-bullish font-semibold bg-[#181920] border border-chart-bullish/30 px-3.5 py-1 rounded-full">رصد لحظه‌ای رویدادها</span>
+<span class="font-latin text-3xl font-extrabold gold-gradient-text">$15</span>
+</div>
+<h3 class="font-headline-xl text-[28px] sm:text-[30px] leading-tight text-white font-bold">چنل VIP ترید خبری</h3>
+<p class="font-body-md text-body-md text-neutral-400 mt-4 leading-relaxed max-w-md">
+              پیگیری رویدادهای خبری مهم بازار در یک کانال ویژه؛ تحلیل سریع داده‌های اشتغال، تورم، تصمیمات نرخ بهره و سناریوهای حرکتی ارزها.
+            </p>
+<!-- Economic Calendar Mini Stream -->
+<div class="mt-8 mb-8 space-y-2.5">
+<div class="bg-[#09090c] rounded-xl p-3 border border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 rounded-full bg-chart-bearish"></span>
+<div>
+<p class="font-label-md text-label-md text-white font-medium">شاخص CPI هسته‌ای ایالات متحده</p>
+<p class="font-label-sm text-label-sm text-neutral-400">پیش‌بینی: 0.3% | پیشین: 0.4%</p>
+</div>
+</div>
+<span class="font-mono text-label-sm text-[#FF453A] font-bold">HIGH IMPACT</span>
+</div>
+<div class="bg-[#09090c] rounded-xl p-3 border border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 rounded-full bg-[#f5b301]"></span>
+<div>
+<p class="font-label-md text-label-md text-white font-medium">بیانیه نرخ بهره بانک مرکزی اروپا (ECB)</p>
+<p class="font-label-sm text-label-sm text-neutral-400">تحلیل سناریوی شکست حمایت ۱.۰۸</p>
+</div>
+</div>
+<span class="font-mono text-label-sm text-primary">MACRO FOCUS</span>
+</div>
+</div>
+</div>
+<a class="gold-btn w-full sm:w-auto self-start px-8 py-3.5 rounded-full text-center transition-all flex items-center justify-center gap-2" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PROMOTIONAL BENTO GRID (ALL 5 PRODUCTS) -->
+<section class="w-full bg-[#0b0c10] py-space-3xl border-b border-[#f5b301]/15" id="products-bento">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm text-primary tracking-widest block mb-2 uppercase font-bold">COMPLETE ECOSYSTEM</span>
+<h2 class="font-headline-xl text-headline-xl text-white tracking-tight font-bold">محصولات <span class="gold-gradient-text">فور فارکس</span></h2>
+<p class="font-body-md text-body-md text-neutral-400 mt-space-xs">
+          دسترسی مستقیم و آنی به تمام راهکارهای تحلیلی و آموزشی مجموعه در یک نگاه
+        </p>
+</div>
+<!-- Bento Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+<!-- Product 1: 3M Plan (2 Cols) -->
+<div class="lg:col-span-2 bg-[#111217] gold-border-glow gold-card-hover rounded-3xl p-6 flex flex-col justify-between transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm bg-[#181920] border border-white/5 text-neutral-300 px-2.5 py-1 rounded-full">اندیکاتور تکنیکال</span>
+<span class="font-latin text-2xl font-bold gold-gradient-text">$20</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">اشتراک ۳ ماهه اندیکاتور</h4>
+<p class="font-body-sm text-body-sm text-neutral-400 mb-6">سه ماه دسترسی کامل به ابزار برای آزمایش فرایند معاملاتی در ستاپ‌های روزمره.</p>
+<div class="h-24 bg-[#09090c] rounded-xl flex items-center justify-center p-3 mb-6 border border-white/5">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 200 60">
+<path d="M 5,50 Q 50,10 100,35 T 195,15" stroke="currentColor" stroke-width="2"></path>
+<circle cx="100" cy="35" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-full bg-[#181920] hover:bg-[#20222c] text-white border border-[#f5b301]/25 hover:border-[#f5b301]/60 font-label-md text-label-md text-center transition-colors flex items-center justify-center gap-1.5" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+<!-- Product 2: 6M Plan (2 Cols - Highlighted) -->
+<div class="lg:col-span-2 bg-[#151722] border-2 border-[#f5b301]/50 rounded-3xl p-6 flex flex-col justify-between shadow-[0_8px_30px_rgba(245,179,1,0.12)] transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm bg-primary/10 border border-primary/30 text-primary px-2.5 py-1 rounded-full font-bold">توصیه شده</span>
+<span class="font-latin text-2xl font-bold gold-gradient-text">$55</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">اشتراک ۶ ماهه اندیکاتور</h4>
+<p class="font-body-sm text-body-sm text-neutral-300 mb-6">شش ماه همراهی با ابزار تحلیل بازار، متوازن‌ترین انتخاب از دیدگاه زمان و هزینه.</p>
+<div class="h-24 bg-[#09090c] rounded-xl flex items-center justify-center p-3 mb-6 border border-[#f5b301]/20">
+<svg class="w-full h-full text-chart-bullish" fill="none" viewbox="0 0 200 60">
+<path d="M 5,45 C 50,60 80,10 120,25 C 160,40 180,10 195,5" stroke="currentColor" stroke-width="2"></path>
+<circle cx="120" cy="25" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+</div>
+<a class="gold-btn w-full py-2.5 rounded-full font-label-md text-label-md text-center transition-all flex items-center justify-center gap-1.5" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+<!-- Product 3: 1 Year Plan (2 Cols) -->
+<div class="lg:col-span-2 bg-[#111217] gold-border-glow gold-card-hover rounded-3xl p-6 flex flex-col justify-between transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm bg-[#181920] border border-white/5 text-neutral-300 px-2.5 py-1 rounded-full">حداکثر صرفه‌جویی</span>
+<span class="font-latin text-2xl font-bold gold-gradient-text">$99</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">اشتراک ۱ ساله اندیکاتور</h4>
+<p class="font-body-sm text-body-sm text-neutral-400 mb-6">یک سال دسترسی برای استفاده بلندمدت، همراه با ثبات در تمامی نوسانات سالانه مارکت.</p>
+<div class="h-24 bg-[#09090c] rounded-xl flex items-center justify-center p-3 mb-6 border border-white/5">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 200 60">
+<path d="M 5,50 L 40,35 L 75,45 L 110,20 L 150,30 L 195,8" stroke="currentColor" stroke-width="2"></path>
+<circle cx="195" cy="8" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-full bg-[#181920] hover:bg-[#20222c] text-white border border-[#f5b301]/25 hover:border-[#f5b301]/60 font-label-md text-label-md text-center transition-colors flex items-center justify-center gap-1.5" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+<!-- Product 4: 10 Strategies (3 Cols) -->
+<div class="lg:col-span-3 bg-[#111217] gold-border-glow gold-card-hover rounded-3xl p-6 flex flex-col justify-between transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm bg-[#181920] border border-white/5 text-neutral-300 px-2.5 py-1 rounded-full">دوره و دستورالعمل</span>
+<span class="font-latin text-2xl font-bold gold-gradient-text">$19</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">۱۰ استراتژی با وین‌ریت بالا برای ترید</h4>
+<p class="font-body-sm text-body-sm text-neutral-400 mb-4">۱۰ ایده و چارچوب معاملاتی برای بررسی و تمرین سیستماتیک همراه با مدیریت ریسک گام‌به‌گام.</p>
+<div class="grid grid-cols-2 gap-2 mb-6">
+<div class="bg-[#09090c] p-2.5 rounded-lg border border-white/5 text-label-sm text-neutral-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">data_object</span>
+<span>قوانین شفاف ورود/خروج</span>
+</div>
+<div class="bg-[#09090c] p-2.5 rounded-lg border border-white/5 text-label-sm text-neutral-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">balance</span>
+<span>مدیریت سرمایه دقیق</span>
+</div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-full bg-[#181920] hover:bg-[#20222c] text-white border border-[#f5b301]/25 hover:border-[#f5b301]/60 font-label-md text-label-md text-center transition-colors flex items-center justify-center gap-1.5" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+<!-- Product 5: VIP News Channel (3 Cols) -->
+<div class="lg:col-span-3 bg-[#111217] gold-border-glow gold-card-hover rounded-3xl p-6 flex flex-col justify-between transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm bg-[#181920] border border-white/5 text-neutral-300 px-2.5 py-1 rounded-full">کانال تحلیلی VIP</span>
+<span class="font-latin text-2xl font-bold gold-gradient-text">$15</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">چنل VIP ترید خبری</h4>
+<p class="font-body-sm text-body-sm text-neutral-400 mb-4">پیگیری رویدادهای خبری مهم بازار در یک کانال ویژه جهت مواجهه آگاهانه با انتشار اخبار با نوسان شدید.</p>
+<div class="grid grid-cols-2 gap-2 mb-6">
+<div class="bg-[#09090c] p-2.5 rounded-lg border border-white/5 text-label-sm text-neutral-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-chart-bullish">notifications_active</span>
+<span>هشدارهای قبل از خبر</span>
+</div>
+<div class="bg-[#09090c] p-2.5 rounded-lg border border-white/5 text-label-sm text-neutral-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-chart-bullish">insights</span>
+<span>بررسی واکنش مارکت</span>
+</div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-full bg-[#181920] hover:bg-[#20222c] text-white border border-[#f5b301]/25 hover:border-[#f5b301]/60 font-label-md text-label-md text-center transition-colors flex items-center justify-center gap-1.5" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: TRUST & SERVICE BENEFITS -->
+<section class="w-full bg-[#08080a] py-space-3xl border-b border-[#f5b301]/15">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-xl">
+<!-- Benefit 1 -->
+<div class="flex flex-col items-start text-right">
+<div class="w-12 h-12 rounded-2xl bg-[#111217] border border-[#f5b301]/30 flex items-center justify-center text-primary mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[26px]">visibility</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">توضیحات شفاف</h4>
+<p class="font-body-sm text-body-sm text-neutral-400 leading-relaxed">
+            اطلاعات شفاف در مورد کارکرد هر ابزار بدون بزرگ‌نمایی‌های غیرواقعی یا نرخ‌بردهای تخیلی.
+          </p>
+</div>
+<!-- Benefit 2 -->
+<div class="flex flex-col items-start text-right">
+<div class="w-12 h-12 rounded-2xl bg-[#111217] border border-[#f5b301]/30 flex items-center justify-center text-primary mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[26px]">download_done</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">دسترسی به محصولات دیجیتال</h4>
+<p class="font-body-sm text-body-sm text-neutral-400 leading-relaxed">
+            تحویل سریع و آنی فایل‌ها، لایسنس‌ها و دسترسی به کانال‌ها بلافاصله پس از تکمیل ثبت سفارش.
+          </p>
+</div>
+<!-- Benefit 3 -->
+<div class="flex flex-col items-start text-right">
+<div class="w-12 h-12 rounded-2xl bg-[#111217] border border-[#f5b301]/30 flex items-center justify-center text-primary mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[26px]">support_agent</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">پشتیبانی در تلگرام</h4>
+<p class="font-body-sm text-body-sm text-neutral-400 leading-relaxed">
+            همراهی مستمر با اعضا جهت پاسخگویی به ابهامات نصب، تنظیمات اندیکاتور و سوالات فنی.
+          </p>
+</div>
+<!-- Benefit 4 -->
+<div class="flex flex-col items-start text-right">
+<div class="w-12 h-12 rounded-2xl bg-[#111217] border border-[#f5b301]/30 flex items-center justify-center text-primary mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[26px]">bolt</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-white mb-2 font-bold">فرایند سفارش آسان</h4>
+<p class="font-body-sm text-body-sm text-neutral-400 leading-relaxed">
+            ثبت مستقیم و بدون پیچیدگی از طریق بات اختصاصی تلگرام در چند دقیقه بدون نیاز به مراحل زمان‌بر.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: DIGNIFIED RISK NOTICE -->
+<section class="w-full bg-[#08080a] pb-space-xl pt-space-lg">
+<div class="max-w-5xl mx-auto px-6 lg:px-12">
+<div class="p-6 rounded-2xl bg-[#111217] border border-white/5 flex items-start gap-4 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">info</span>
+<div class="space-y-1">
+<h5 class="font-label-md text-label-md text-white font-bold">اطلاعیه سلب مسئولیت و ریسک بازار</h5>
+<p class="font-body-sm text-body-sm text-neutral-400 leading-relaxed">
+            معامله در بازارهای مالی با ریسک همراه است. ابزارها و محتوای این وب‌سایت تضمین‌کننده سود نیستند و جایگزین بررسی مستقل یا مشاوره مالی شخصی نمی‌شوند.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: FINAL GOLD CLOSING BANNER -->
+<section class="w-full bg-[#08080a] py-space-3xl">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#14161f] to-[#0e0f14] border border-[#f5b301]/30 px-8 py-16 sm:px-16 sm:py-24 text-center flex flex-col items-center shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+<!-- Ambient radial glow behind CTA -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,179,1,0.12),transparent_70%)] pointer-events-none"></div>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase mb-3 relative z-10 font-bold">START YOUR JOURNEY</span>
+<h2 class="font-display-hero text-headline-xl sm:text-display-hero text-white tracking-tight max-w-3xl mb-space-md relative z-10 font-extrabold">
+          محصول مناسب مسیر معاملاتی‌ات را <span class="gold-gradient-text">انتخاب کن</span>
+</h2>
+<p class="font-body-xl text-body-lg sm:text-body-xl text-neutral-300 max-w-2xl leading-relaxed mb-space-xl relative z-10">
+          محصول موردنظرت را بررسی کن و برای ثبت سفارش، مستقیماً از طریق تلگرام با ما در ارتباط باش.
+        </p>
+<a class="gold-btn relative z-10 px-9 py-4 rounded-full font-label-lg text-label-lg transition-all transform hover:scale-[1.02] active:scale-[0.99] flex items-center gap-2" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank">
+<span>ثبت سفارش در تلگرام</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-[#070709] border-t border-[#f5b301]/15 shadow-[0_-4px_30px_rgba(0,0,0,0.5)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-2xl"><div class="flex flex-col md:flex-row md:items-start justify-between gap-space-xl pb-space-xl"><div class="max-w-md"><div class="flex items-center gap-space-sm mb-space-sm"><div class="p-1 rounded bg-white/5 border border-white/10"><img alt="لوگو فور فارکس" class="h-7 w-auto object-contain shrink-0 invert brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0xq4PkSTt5zSzuitTn4INoO2u4Aze4rNn-DVNX3yCIzAUmOJR2Bz8UQ2p5OYuhZNwwZoJXEjUVMP9ck07WJmGkyeV-0YU15s5c9Huf0zb5tAhmZgz737_35jungFePMdBZsaXdLCrf38nDGK-xSAp4QgfhZeqDayRw9lPPL0MDDbQVTDg317_2910A8DQHbkirg6FVUd4tbCWKgqb3em6Ze8yHDJxzpK9K8VXJAY5Yf-6zedhxbPF_A"/></div><span class="font-headline-sm text-headline-sm text-white font-bold"><span class="gold-gradient-text">فور فارکس</span></span></div><p class="font-body-md text-body-md text-neutral-400 leading-relaxed">ابزارهای هوشمند تحلیل تکنیکال و آموزش معامله‌گری</p></div><div class="flex flex-wrap items-center gap-space-lg"><a class="font-label-lg text-label-lg text-neutral-400 hover:text-primary transition-colors" href="#">خانه</a><a class="font-label-lg text-label-lg text-neutral-400 hover:text-primary transition-colors" href="#">محصولات</a><a class="font-label-lg text-label-lg text-neutral-400 hover:text-primary transition-colors" href="#">درباره ما</a><a class="font-label-lg text-label-lg text-neutral-400 hover:text-primary transition-colors" href="#">تماس با ما</a><a class="font-label-lg text-label-lg text-primary hover:text-amber-300 transition-colors flex items-center gap-space-xs font-semibold" href="https://t.me/trades4forexbot" rel="noopener noreferrer" target="_blank"><span>ثبت سفارش در تلگرام</span><span class="material-symbols-outlined text-[16px]">north_west</span></a></div></div><div class="py-space-lg bg-[#111217] border border-white/5 rounded-xl px-space-md mb-space-lg"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">shield</span><p class="font-body-sm text-body-sm text-neutral-400 leading-relaxed">اطلاعیه ریسک: معامله در بازارهای مالی با ریسک همراه است. ابزارها و محتوای این وب‌سایت تضمین‌کننده سود نیستند و جایگزین بررسی مستقل یا مشاوره مالی شخصی نمی‌شوند.</p></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md text-neutral-500 font-body-sm text-body-sm border-t border-white/5"><p>© فور فارکس — تمامی حقوق محفوظ است.</p><p class="font-label-sm text-label-sm tracking-wide text-[#ffd485]/80">LUXURY FINTECH &amp; ALGORITHMIC ARCHITECTURE</p></div></div></footer></body></html>
